@@ -1,7 +1,6 @@
 package com.souzvidal.dscatalog.services;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.souzvidal.dscatalog.dto.CategoryDTO;
 import com.souzvidal.dscatalog.entities.Category;
 import com.souzvidal.dscatalog.repositories.CategoryRepository;
-import com.souzvidal.dscatalog.services.exceptions.EntityNotFoundException;
 
 @Service
 public class CategoryService {
@@ -24,6 +22,7 @@ public class CategoryService {
 		List<Category> list = repository.findAll();
 		return list.stream().map(x -> new CategoryDTO(x)).collect(Collectors.toList());
 	}
+<<<<<<< HEAD
 	
 	@Transactional(readOnly = true)
 	public CategoryDTO findById(Long id) {
@@ -39,5 +38,7 @@ public class CategoryService {
 		entity = repository.save(entity);
 		return new CategoryDTO(entity);
 	}
+=======
+>>>>>>> parent of 48daf22 (Find Category by id, exception handling)
 
 }

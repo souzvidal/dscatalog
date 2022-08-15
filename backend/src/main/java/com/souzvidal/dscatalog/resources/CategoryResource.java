@@ -6,9 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+=======
+>>>>>>> parent of 48daf22 (Find Category by id, exception handling)
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -28,6 +31,7 @@ public class CategoryResource {
 		List<CategoryDTO> list = service.findAll();		
 		return ResponseEntity.ok().body(list);
 	}
+<<<<<<< HEAD
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<CategoryDTO> findById(@PathVariable Long id) {
@@ -43,5 +47,7 @@ public class CategoryResource {
 		return ResponseEntity.created(uri).body(dto);
 	}
 
+=======
+>>>>>>> parent of 48daf22 (Find Category by id, exception handling)
 
 }
